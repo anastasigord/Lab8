@@ -1,7 +1,7 @@
 :root {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #1e293b;
-  background-color: #f4f6fb; 
+  color: #4d3827;
+  background-color: #f3e8dd;
 }
 
 * {
@@ -10,6 +10,7 @@
 
 body {
   margin: 0;
+  background: #f3e8dd;
 }
 
 .page {
@@ -28,64 +29,84 @@ body {
 }
 
 .card {
-  background: #ffffff;
-  border: 1px solid #dbe4f0;
-  border-radius: 14px;
-  padding: 16px;
-  margin-bottom: 16px;
+  background: #f6efe6;
+  border: 1px solid #dbc1ad;
+  border-radius: 18px;
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 25px rgba(118, 80, 45, 0.08);
 }
 
 .fieldLabel {
   display: block;
   margin-bottom: 6px;
   margin-top: 10px;
-  font-weight: 600;
+  font-weight: 700;
+  color: #5e3f2a;
 }
 
 .input,
 .textarea {
   width: 100%;
-  border: 1px solid #c5d1e0;
-  border-radius: 10px;
-  padding: 10px 12px;
+  border: 1px solid #d3b7a1;
+  border-radius: 12px;
+  padding: 12px 14px;
   font-size: 14px;
+  background: #fff8f1;
+  color: #4c3727;
 }
 
 .btn {
-  border: 1px solid #8da2ba;
-  background: #ffffff;
-  color: #1e293b;
-  border-radius: 10px;
-  padding: 8px 12px;
+  border: 1px solid #b69372;
+  background: #fff5ed;
+  color: #4d3827;
+  border-radius: 12px;
+  padding: 10px 16px;
   cursor: pointer;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
   margin-top: 20px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.btn:hover {
+  background: #e8d2bf;
+  color: #3f2a1d;
+  transform: translateY(-1px);
 }
 
 .btnPrimary {
   margin-top: 20px;
-  background: #0f766e;
-  border-color: #0f766e;
+  background: #9b6a47;
+  border-color: #9b6a47;
   color: #ffffff;
 }
 
+.btnPrimary:hover {
+  background: #b3825e;
+  border-color: #b3825e;
+}
+
 .btnDanger {
-  background: #be123c;
-  border-color: #be123c;
+  background: #bb5d48;
+  border-color: #bb5d48;
   color: #ffffff;
   margin-top: 20px;
-  
+}
+
+.btnDanger:hover {
+  background: #d1765f;
+  border-color: #d1765f;
 }
 
 .tableWrapper {
   overflow-x: auto;
-  background: #fff;
-  border: 1px solid #dbe4f0;
-  border-radius: 14px;
+  background: #f6efe6;
+  border: 1px solid #dbc1ad;
+  border-radius: 18px;
 }
 
 .inventoryTable {
@@ -97,65 +118,69 @@ body {
 .inventoryTable th,
 .inventoryTable td {
   text-align: left;
-  padding: 12px;
-  border-bottom: 1px solid #e8eef6;
+  padding: 14px;
+  border-bottom: 1px solid #e4d1c4;
   vertical-align: top;
+}
+
+.inventoryTable th {
+  color: #5b4030;
 }
 
 .thumb {
   width: 68px;
   height: 68px;
   object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid #dbe4f0;
+  border-radius: 12px;
+  border: 1px solid #d3b7a1;
 }
 
 .detailsDescription {
-  color: #334155;
-  line-height: 1.5;
+  color: #5e4030;
+  line-height: 1.6;
 }
 
 .detailsImage {
   width: 100%;
   max-height: 420px;
   object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid #dbe4f0;
+  border-radius: 14px;
+  border: 1px solid #d3b7a1;
 }
 
 .imagePlaceholder {
-  border: 1px dashed #b9c7d8;
-  border-radius: 12px;
+  border: 1px dashed #c8a68d;
+  border-radius: 14px;
   min-height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #64748b;
+  color: #8c6d52;
 }
 
 .actions {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .state {
-  margin: 12px 0;
+  margin: 14px 0;
 }
 
 .errorText {
-  color: #be123c;
+  color: #8b2a1b;
 }
 
 .muted {
-  color: #64748b;
+  color: #7b6251;
 }
 
 .modalBackdrop {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.45);
+  background: rgba(77, 47, 28, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,10 +189,10 @@ body {
 
 .modalCard {
   width: min(420px, 100%);
-  background: #ffffff;
-  border-radius: 14px;
-  border: 1px solid #dbe4f0;
-  padding: 16px;
+  background: #f8efe5;
+  border-radius: 18px;
+  border: 1px solid #d3b7a1;
+  padding: 20px;
 }
 
 @media (max-width: 640px) {
