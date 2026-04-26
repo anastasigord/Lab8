@@ -1,0 +1,65 @@
+.inventoryCard {
+  background: #fbf1e8;
+  border: 1px solid #d7bfa7;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(110, 75, 40, 0.08);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.inventoryCard:hover {
+  transform: translateY(-4px);
+  border-color: #b69370;
+  box-shadow: 0 16px 36px rgba(110, 75, 40, 0.16);
+}
+
+.inventoryCard img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.inventoryCardBody {
+  padding: 18px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inventoryCard h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #4e3828;
+  line-height: 1.2;
+}
+
+.favoriteButton {
+  border: 1px solid #d7bfa7;
+  background: #ffffff;
+  color: #7e553c;
+  border-radius: 999px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  align-self: flex-start;
+}
+
+.favoriteButton:hover {
+  background: #f4e2d1;
+  color: #5f3c27;
+  border-color: #c2a48a;
+}
+
+.favoriteButton.active {
+  background: #d8b69f;
+  color: #3f2a1e;
+  border-color: #b58569;
+}
+
+@media (max-width: 640px) {
+  .inventoryCard img {
+    height: 180px;
+  }
+}
