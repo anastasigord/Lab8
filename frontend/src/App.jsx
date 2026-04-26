@@ -5,19 +5,26 @@ import AdminInventoryEditPage from './pages/AdminInventoryEditPage'
 import AdminInventoryPage from './pages/AdminInventoryPage'
 import Gallery from './pages/Gallery'
 import Favorites from './pages/Favorites'
+import Sidebar from './components/Sidebar'
 import './styles/admin.css'
+import './styles/layout.css'
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/admin/inventory" replace />} />
-      <Route path="/admin/inventory" element={<AdminInventoryPage />} />
-      <Route path="/admin/inventory/create" element={<AdminInventoryCreatePage />} />
-      <Route path="/admin/inventory/:id/edit" element={<AdminInventoryEditPage />} />
-      <Route path="/admin/inventory/:id" element={<AdminInventoryDetailsPage />} />
-      <Route path="/gallery" element={<Gallery />} />
-      <Route path="/favorites" element={<Favorites />} />
-    </Routes>
+    <div className="appLayout">
+      <Sidebar />
+      <main className="mainContent">
+        <Routes>
+          <Route path="/" element={<Navigate to="/admin/inventory" replace />} />
+          <Route path="/admin/inventory" element={<AdminInventoryPage />} />
+          <Route path="/admin/inventory/create" element={<AdminInventoryCreatePage />} />
+          <Route path="/admin/inventory/:id/edit" element={<AdminInventoryEditPage />} />
+          <Route path="/admin/inventory/:id" element={<AdminInventoryDetailsPage />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/favorites" element={<Favorites />} />
+        </Routes>
+      </main>
+    </div>
   )
 }
 
