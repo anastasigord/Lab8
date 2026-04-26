@@ -34,6 +34,8 @@ export async function fetchInventoryList() {
   return parseResponse(response)
 }
 
+export const getInventory = fetchInventoryList
+
 export async function fetchInventoryItem(id) {
   const response = await fetch(buildUrl(`/inventory/${id}`))
   return parseResponse(response)
