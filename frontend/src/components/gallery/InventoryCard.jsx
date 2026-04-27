@@ -1,12 +1,14 @@
-import '../styles/card.css'
+import { getImageUrl } from '../../services/inventoryApi'
+import '../../styles/card.css'
 
 function InventoryCard({ item, onClick, onToggleFavorite, isFavorite }) {
   return (
     <div className="inventoryCard" onClick={onClick}>
-      <img
-        src={`http://localhost:3000/inventory/${item.id}/photo`}
-        alt={item.inventory_name}
-      />
+      {item.photo_url ? (
+        <img src={getImageUrl(item.photo_url)} alt={item.inventory_name} />
+      ) : (
+        <div style={{ padding: 20, color: '#7a5b40' }}>Немає фото</div>
+      )}
       <div className="inventoryCardBody">
         <h3>{item.inventory_name}</h3>
 
